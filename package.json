@@ -7,9 +7,11 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "build": "node build/build.js",
+    "build": "rm -rf www/* && node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "clean": "rm -rf node_modules/* && rm -rf www/*"
+    "clean": "rm -rf node_modules/* && rm -rf www/*",
+    "init": "yarn run clean && yarn install",
+    "browser": "yarn run build && cordova prepare browser && cordova run browser"
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",
