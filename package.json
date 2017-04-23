@@ -10,7 +10,7 @@
     "build": "rm -rf www/* && node build/build.js",
     "lint": "eslint --ext .js,.vue src",
     "clean": "rm -rf node_modules/* && rm -rf www/*",
-    "init": "yarn run clean && yarn install",
+    "init": "yarn run clean && yarn install && yarn run build && cordova platform add browser && cordova prepare",
     "browser": "yarn run build && cordova prepare browser && cordova run browser"
   },
   "dependencies": {

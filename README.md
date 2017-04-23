@@ -5,6 +5,9 @@
 ## Build Setup
 
 ``` bash
+# need cordova CLI
+yarn global add cordova
+
 # install dependencies
 yarn run init
 
@@ -16,3 +19,4 @@ yarn run build
 
 # run cordova in platform browser
 yarn run browser
+```
